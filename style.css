@@ -1,0 +1,240 @@
+img {
+  border: 4px solid #ce1141;
+}
+ 
+.top_img {
+  width: 350px;
+  height: 200px;
+  border-top-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  animation: pulseAnimation 0.5s ease 3s 1;
+}
+
+.iframe_cubit {
+  width: 100%;
+  height: 400px;
+  border: 4px solid #ce1141;
+}
+
+
+.whateverurnameoftheclasswas {
+  width: 100px;
+  height: 100px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  animation: flipAnimation 1s ease 5s infinite;
+}
+
+@keyframes flipAnimation {
+  0% { transform: perspective(400px) rotateY(0); }
+  100% { transform: perspective(400px) rotateY(360deg); }
+}
+
+.element {
+  animation-name: flipAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: whitesmoke;
+}
+
+h1 {
+  color: #ce1141;
+  animation: slideDownAnimation 2s ease 1s 1 both;
+}
+
+h2 {
+  color: black;
+}
+
+.brief {
+  color: rgb(69, 67, 67);
+  font-weight: 900;
+}
+
+hr {
+  border: none;
+  height: 6px;
+  border-top: 6px dashed #ce1141;
+}
+
+table {
+  width: 100%;
+}
+
+.text-cell {
+  display: inline-block;
+}
+
+.card-table {
+  width: 100%;
+  border-spacing: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 10s;
+  padding-bottom: 10px;
+}
+
+.card:hover {
+  animation: cardLift 1s ease 1 forwards;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.toggle-btn {
+  background-color: #ce1141;
+  color: white;
+  padding: 14px 28px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+
+.toggle-checkbox:checked+.toggle-btn {
+  display: none;
+}
+
+.toggle-checkbox:checked~.flying-container {
+  display: table;
+}
+
+.flying-container {
+  width: 100%;
+  background: black;
+  overflow: hidden;
+  display: none;
+}
+
+.flying-jordan {
+  display: block;
+  margin: 20px auto;
+  height: 150px;
+  width: 150px;
+  animation: flyAcross 7s linear infinite;
+  border: none;
+}
+
+@keyframes flyAcross {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100vw);
+  }
+}
+
+
+@keyframes pulseAnimation {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.element {
+  animation-name: pulseAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+
+@keyframes slideDownAnimation {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.element {
+  animation-name: slideDownAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+
+@keyframes wobbleAnimation {
+  0% {
+    transform: translateX(0) rotate(0);
+  }
+
+  15% {
+    transform: translateX(-25px) rotate(-5deg);
+  }
+
+  30% {
+    transform: translateX(20px) rotate(3deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3deg);
+  }
+
+  60% {
+    transform: translateX(10px) rotate(2deg);
+  }
+
+  75% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+.element {
+  animation-name: wobbleAnimation;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+
+@keyframes cardLift {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
